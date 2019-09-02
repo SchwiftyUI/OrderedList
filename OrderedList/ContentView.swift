@@ -18,9 +18,12 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach(listItems, id: \.self) { item in
-                        Text("\(item.name) - \(item.order)")
+                        NavigationLink(destination: ListItemView(listItem: item)) {
+                            Text("\(item.name) - \(item.order)")
+                        }
                     }
                     .onDelete(perform: deleteItem)
+                    .onMove(perform: moveItem)
                 }
                 Button(action: addItem) {
                     Text("Add Item")
@@ -28,6 +31,37 @@ struct ContentView: View {
             }
             .navigationBarItems(trailing: EditButton())
         }
+    }
+    
+    func moveItem(indexSet: IndexSet, destination: Int) {
+        let source = indexSet.first!
+        
+        if source < destination {
+            var startIndex = source + 1
+            let endIndex = destination - 1
+            var startOrder = listItems[source].order
+            while startIndex <= endIndex {
+                listItems[startIndex].order = startOrder
+                startOrder = startOrder + 1
+                startIndex = startIndex + 1
+            }
+            
+            listItems[source].order = startOrder
+            
+        } else if destination < source {
+            var startIndex = destination
+            let endIndex = source - 1
+            var startOrder = listItems[destination].order + 1
+            let newOrder = listItems[destination].order
+            while startIndex <= endIndex {
+                listItems[startIndex].order = startOrder
+                startOrder = startOrder + 1
+                startIndex = startIndex + 1
+            }
+            listItems[source].order = newOrder
+        }
+        
+        saveItems()
     }
     
     func deleteItem(indexSet: IndexSet) {
