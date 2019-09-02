@@ -14,6 +14,7 @@
 		DEAF7D36231D6EE70012D769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAF7D35231D6EE70012D769 /* Assets.xcassets */; };
 		DEAF7D39231D6EE70012D769 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAF7D38231D6EE70012D769 /* Preview Assets.xcassets */; };
 		DEAF7D3C231D6EE70012D769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAF7D3A231D6EE70012D769 /* LaunchScreen.storyboard */; };
+		DEAF7D44231D6F6A0012D769 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF7D43231D6F6A0012D769 /* ListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DEAF7D38231D6EE70012D769 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DEAF7D3B231D6EE70012D769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEAF7D3D231D6EE70012D769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEAF7D43231D6F6A0012D769 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DEAF7D3D231D6EE70012D769 /* Info.plist */,
 				DEAF7D30231D6EE60012D769 /* OrderedList.xcdatamodeld */,
 				DEAF7D37231D6EE70012D769 /* Preview Content */,
+				DEAF7D43231D6F6A0012D769 /* ListItem.swift */,
 			);
 			path = OrderedList;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAF7D44231D6F6A0012D769 /* ListItem.swift in Sources */,
 				DEAF7D2D231D6EE60012D769 /* AppDelegate.swift in Sources */,
 				DEAF7D32231D6EE60012D769 /* OrderedList.xcdatamodeld in Sources */,
 				DEAF7D34231D6EE60012D769 /* ContentView.swift in Sources */,
