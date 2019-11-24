@@ -21,16 +21,6 @@ struct ListItemView: View {
             TextField("Item Name", text: $itemName)
             Button(action: {
                 self.listItem.name = self.itemName
-                
-                let order = self.listItem.order
-                self.listItem.order = 0
-                do {
-                    try self.managedObjectContext.save()
-                } catch {
-                    print(error)
-                }
-                
-                self.listItem.order = order
                 do {
                     try self.managedObjectContext.save()
                 } catch {
