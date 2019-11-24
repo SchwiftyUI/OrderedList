@@ -11,7 +11,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: ListItem.entity(), sortDescriptors: [NSSortDescriptor(key: "order", ascending: true)]) var listItems: FetchedResults<ListItem>
+    @FetchRequest(fetchRequest: ListItem.getListItemFetchRequest()) var listItems: FetchedResults<ListItem>
     
     var body: some View {
         NavigationView {
